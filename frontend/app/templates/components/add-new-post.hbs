@@ -1,13 +1,12 @@
 {{#if addNewPost}}
-  <form class="" action="index.html" method="post">
-    <div class="form-group">
-      <label for="title">Title</label>
-      {{input value=title id="title"}}
-      <label for="story">Story</label>
-      {{input value=story id="story"}}
-    </div>
-  <button {{action 'savePost'}}>Submit</button>
-  </form>
+<form class="" action="index.html" method="post">
+  <div class="form-group">
+    {{input value=title id="title" placeholder="Title" class='form-control'}}
+    <br>
+    {{input value=story id="story" placeholder="Story" class='form-control'}}
+  </div>
+  <button class='btn btn-primary' {{action 'savePost' class 'btn btn-primary'}}>Submit</button>
+</form>
 {{else}}
-  <button {{action 'newPost'}}>New Post</button>
+<button class='btn btn-primary' {{action 'newPost'}}>New Post</button>
 {{/if}}

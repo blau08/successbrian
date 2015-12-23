@@ -1,4 +1,11 @@
+{{add-new-post addNewPost=addNewPost savePost="savePost"}}
+
+<br>
+
 {{#each model as |post|}}
   {{post.title}}
+  <br>
   {{post.story}}
+  <br>
+  <hr>
 {{/each}}
